@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 63px;
+}
+.menu {
+  list-style: none;                  /* Quita los puntos de la lista */
+  display: flex;                     /* Alinea los <li> horizontalmente */
+  justify-content: center;   /* Espacio entre elementos */
+  align-items: center;              /* Centra verticalmente */
+  background-color: #72533e;        /* Color de fondo marrón */
+  position: fixed;                  /* Fija la barra arriba */
+  top: 0;
+  left: 0;
+  width: 100%;                      /* Ocupa todo el ancho */
+  height: 63px;                     /* Altura del menú */
+  margin: 0;
+  padding: 0 20px;                  /* Espaciado interno horizontal */
+  z-index: 100;                     /* Asegura que esté por encima de otros elementos */
+}
+
+/* Estilo para los ítems del menú */
+.menu li {
+  margin: 0 15px;
+}
+
+/* Estilo para los enlaces del menú */
+.menu a {
+  text-decoration: none;            /* Quita el subrayado */
+  color: #fff;                      /* Texto blanco */
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+.menu a:hover{
+    background: #746155;
+}
+.hero {
+  background-image: url('../img/mrbarba.png'); /* Cambia a tu imagen real */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Pantalla completa */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-button {
+  background-color: #a8744f;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #8b5c3c;
+}
+.productos-section {
+  padding: 60px 20px;
+  background-color: #f7f2ee;
+  text-align: center;
+}
+
+.productos-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #4d3b33;
+}
+
+/* Contenedor tipo grid */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Cada producto individual */
+.producto {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen del producto */
+.producto img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Título del producto */
+.producto h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Descripción */
+.producto .descripcion {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Precio */
+.producto .precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #a8744f;
+  margin-bottom: 20px;
+}
+
+/* Botón de comprar */
+.boton-comprar {
+  background-color: #a8744f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-comprar:hover {
+  background-color: #8b5c3c;
+}
+.seccion-nosotros {
+  padding: 80px 30px;
+  background: linear-gradient(135deg, #f5f2ef, #fdfdfd);
+  color: #333;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.8;
+  position: relative;
+  overflow: hidden;
+}
+
+.seccion-nosotros::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background-image: url('../img/barber-tools-bg.png'); /* imagen de fondo opcional */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.03;
+  z-index: 0;
+}
+
+.seccion-nosotros h2 {
+  font-size: 2.8rem;
+  color: #72533e;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.seccion-nosotros p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 50px 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+footer .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+footer h3 {
+  color: #a8744f;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+footer p {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #a8744f;
+}
+
+/* Redes sociales */
+.seccion-redes a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.seccion-redes a img:hover {
+  transform: scale(1.1);
+}
+.servicios-section {
+  padding: 60px 20px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.servicios-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #72533e;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicio {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.servicio:hover {
+  transform: translateY(-5px);
+}
+
+.servicio h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.servicio .precio {
+  font-weight: bold;
+  color: #a8744f;
+  margin-bottom: 10px;
+}
+
+.servicio .descripcion {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.boton-agendar {
+  background-color: #a8744f;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.boton-agendar:hover {
+  background-color: #8b5c3c;
+}
+main {
+  padding: 60px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #72533e;
+  margin-bottom: 20px;
+}
+
+main p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Estilo del formulario */
+form {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+form div {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #a8744f;
+  outline: none;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: #a8744f;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #8b5c3c;
+}
