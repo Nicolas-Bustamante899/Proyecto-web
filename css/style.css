@@ -10,30 +10,30 @@ body {
     padding-top: 63px;
 }
 .menu {
-  list-style: none;                  /* Quita los puntos de la lista */
-  display: flex;                     /* Alinea los <li> horizontalmente */
-  justify-content: center;   /* Espacio entre elementos */
-  align-items: center;              /* Centra verticalmente */
-  background-color: #72533e;        /* Color de fondo marrón */
-  position: fixed;                  /* Fija la barra arriba */
+  list-style: none;                  
+  display: flex;                     
+  justify-content: center;   
+  align-items: center;              
+  background-color: #72533e;        
+  position: fixed;                  
   top: 0;
   left: 0;
-  width: 100%;                      /* Ocupa todo el ancho */
-  height: 63px;                     /* Altura del menú */
+  width: 100%;                      
+  height: 63px;                     
   margin: 0;
-  padding: 0 20px;                  /* Espaciado interno horizontal */
-  z-index: 100;                     /* Asegura que esté por encima de otros elementos */
+  padding: 0 20px;                  
+  z-index: 100;                     
 }
 
-/* Estilo para los ítems del menú */
+
 .menu li {
   margin: 0 15px;
 }
 
-/* Estilo para los enlaces del menú */
+
 .menu a {
-  text-decoration: none;            /* Quita el subrayado */
-  color: #fff;                      /* Texto blanco */
+  text-decoration: none;            
+  color: #fff;                    
   font-weight: bold;
   display: block;
   text-transform: uppercase;
@@ -43,16 +43,18 @@ body {
     background: #746155;
 }
 .hero {
-  background-image: url('../img/mrbarba.png'); /* Cambia a tu imagen real */
+  background-image: url('../img/mrbarba.png');
   background-size: cover;
   background-position: center;
-  height: 100vh; /* Pantalla completa */
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
   position: relative;
+  padding: 20px;
 }
 
 .hero::after {
@@ -60,8 +62,13 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+  background-color: rgba(0, 0, 0, 0.5); 
   z-index: 0;
+}
+
+.hero a {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content {
@@ -74,11 +81,15 @@ body {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-button {
@@ -106,7 +117,7 @@ body {
   color: #4d3b33;
 }
 
-/* Contenedor tipo grid */
+
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -115,7 +126,7 @@ body {
   margin: 0 auto;
 }
 
-/* Cada producto individual */
+
 .producto {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -129,28 +140,28 @@ body {
   transform: translateY(-5px);
 }
 
-/* Imagen del producto */
+
 .producto img {
   width: 100px;
   height: auto;
   margin-bottom: 15px;
 }
 
-/* Título del producto */
+
 .producto h3 {
   font-size: 1.3rem;
   color: #333;
   margin-bottom: 10px;
 }
 
-/* Descripción */
+
 .producto .descripcion {
   font-size: 0.95rem;
   color: #666;
   margin-bottom: 15px;
 }
 
-/* Precio */
+
 .producto .precio {
   font-size: 1.2rem;
   font-weight: bold;
@@ -158,7 +169,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Botón de comprar */
+
 .boton-comprar {
   background-color: #a8744f;
   color: #fff;
@@ -255,7 +266,7 @@ footer a:hover {
   color: #a8744f;
 }
 
-/* Redes sociales */
+
 .seccion-redes a img {
   width: 30px;
   height: 30px;
@@ -350,7 +361,7 @@ main p {
   margin-bottom: 40px;
 }
 
-/* Estilo del formulario */
+
 form {
   background-color: #f9f9f9;
   padding: 30px;
