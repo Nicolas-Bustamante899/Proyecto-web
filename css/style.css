@@ -10,33 +10,29 @@ body {
   font-family: sans-serif;
   text-align: center;
 }
+
 .navbar {
   background-color: #72533e !important;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 0.5rem 1rem;
-
+  padding: 0.6rem 1rem;
 }
 
-
-
-
-/* --- MENU NAVBAR --- */
 .navbar-nav {
-  list-style: none; /* ✅ Quita los puntos del <ul> */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 30px;
   width: 100%;
-  padding-left: 0; /* Elimina sangría por defecto del ul */
+  padding-left: 0;
   margin: 0;
+  list-style: none; 
 }
 
 .navbar-nav .nav-item {
-  list-style: none; /* Por si acaso */
+  list-style: none;
 }
 
 .navbar-nav .nav-link {
@@ -46,17 +42,16 @@ body {
   padding: 10px 15px;
   transition: background-color 0.3s ease;
   display: block;
-   text-decoration: none !important;
+  text-decoration: none !important;
+  font-size: 1rem;
 }
 
 .navbar-nav .nav-link:hover {
   background-color: #746155;
   border-radius: 5px;
-   text-decoration: none !important;
+  text-decoration: none !important;
 }
 
-
-/* --- AJUSTES RESPONSIVE PARA CELULARES --- */
 @media (max-width: 992px) {
   .navbar-nav {
     flex-direction: column;
@@ -72,9 +67,11 @@ body {
   .navbar-nav .nav-link {
     width: 100%;
     padding: 10px 0;
-   text-decoration: none !important;
+    font-size: 0.95rem;
+    text-decoration: none !important;
   }
 }
+
 
 .hero {
   background-image: url('../img/mrbarba.png');
