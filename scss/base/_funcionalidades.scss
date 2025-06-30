@@ -1,0 +1,59 @@
+@mixin button-style($bg-color: $secondary-color, $hover-color: $hover-color) {
+  background-color: $bg-color;
+  color: $white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+@mixin card-shadow {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@mixin grid-layout($min-width: 250px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+  gap: 30px;
+}
+
+.hero-button {
+  @include button-style($secondary-color, $hover-color);
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.boton-comprar {
+  @include button-style($secondary-color, $hover-color);
+  padding: 10px 20px;
+}
+
+.boton-agendar {
+  @include button-style($secondary-color, $hover-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.productos-grid {
+  @include grid-layout(250px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicios-grid {
+  @include grid-layout(250px);
+  max-width: 1100px;
+  margin: 0 auto;
+}

@@ -1,0 +1,83 @@
+// Media Queries - Responsive Design
+
+// Responsive navbar
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 20px;
+
+    .nav-link {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 0.95rem;
+      text-decoration: none !important;
+    }
+  }
+
+  .navbar-collapse {
+    background-color: $primary-color;
+  }
+}
+
+// Mobile First approach - agregar más breakpoints según necesites
+@media (max-width: 768px) {
+  // Hero section adjustments
+  .hero {
+    height: 80vh;
+    padding: 15px;
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  // Sections padding adjustments
+  .productos-section,
+  .servicios-section {
+    padding: 40px 15px;
+    
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  // Grid adjustments for mobile
+  .productos-grid,
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  // Form adjustments for very small screens
+  form {
+    padding: 20px;
+  }
+  
+  // Footer adjustments
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  // Smaller text for mobile
+  .seccion-nosotros {
+    padding: 40px 20px;
+    
+    h2 {
+      font-size: 2rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+}
